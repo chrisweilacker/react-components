@@ -11,9 +11,15 @@ var GroceryList = (props) => {
 
 
 
-var GroceryListItem = (props) => (
-  <li>{props.item}</li>
-);
+class GroceryListItem extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (<li>{this.props.item}</li>);
+  }
+
+}
 
 
-ReactDOM.render(<GroceryList items={['Milk', 'Eggs', 'Yogurt']}/>, document.getElementById("app"));
+ReactDOM.render(<GroceryList items={['Milk', 'Eggs', 'Yogurt', 'Bacon']}/>, document.getElementById("app"));
